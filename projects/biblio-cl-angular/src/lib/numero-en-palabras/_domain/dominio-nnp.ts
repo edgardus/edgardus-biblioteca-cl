@@ -41,11 +41,17 @@ export const VALORES_NUMEROS: ValorNumero[] = [
   { valor: 18, texto: 'dieciocho', prefijo: '', nota: '' },
   { valor: 19, texto: 'diecinueve', prefijo: '', nota: '' },
   { valor: 20, texto: 'veinte', prefijo: '', nota: 'Nótese la i' },
-  { valor: 21, texto: 'veintiuno', prefijo: 'veintiún', nota: 'veintiuna Delante de un sustantivo veintiún o veintiuna.' },
+  {
+    valor: 21, texto: 'veintiuno', prefijo: 'veintiún',
+    nota: 'veintiuna Delante de un sustantivo veintiún o veintiuna.'
+  },
   { valor: 22, texto: 'veintidós', prefijo: '', nota: 'Lleva tilde.' },
   { valor: 23, texto: 'veintitrés', prefijo: '', nota: 'Lleva tilde.' },
   { valor: 24, texto: 'veinticuatro', prefijo: '', nota: '' },
-  { valor: 25, texto: 'veinticinco', prefijo: '', nota: 'En textos especializados a 25 años se refieren con el término «generación».' },
+  {
+    valor: 25, texto: 'veinticinco', prefijo: '',
+    nota: 'En textos especializados a 25 años se refieren con el término «generación».'
+  },
   { valor: 26, texto: 'veintiséis', prefijo: '', nota: 'Lleva tilde.' },
   { valor: 27, texto: 'veintisiete', prefijo: '', nota: '' },
   { valor: 28, texto: 'veintiocho', prefijo: '', nota: '' },
@@ -85,8 +91,8 @@ export const VALORES_NUMEROS: ValorNumero[] = [
     valor: 91, texto: 'noventa y uno', prefijo: 'noventa y un',
     nota: 'noventa y una Delante de un sustantivo noventa y un o noventa y una.'
   },
-  { valor: 100, texto: 'cien', prefijo: '', nota: '' },
-  { valor: 101, texto: 'ciento un', prefijo: '', nota: 'ciento una' },
+  { valor: 100, texto: 'cien', prefijo: 'ciento', nota: '' },
+  { valor: 101, texto: 'ciento uno', prefijo: 'ciento un', nota: 'ciento una' },
   { valor: 111, texto: 'ciento once', prefijo: '', nota: '' },
   { valor: 123, texto: 'ciento veintitrés', prefijo: '', nota: '' },
   { valor: 153, texto: 'ciento cincuenta y tres', prefijo: '', nota: '' },
