@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "biblio-cl-angular": [
+        "dist/biblio-cl-angular"
+      ],
+      "biblio-cl-angular/*": [
+        "dist/biblio-cl-angular/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
