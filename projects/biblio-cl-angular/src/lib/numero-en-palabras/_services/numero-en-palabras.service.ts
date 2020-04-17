@@ -24,12 +24,10 @@ export class NumeroEnPalabrasService {
     const rango = VALORES_NUMEROS.filter(ra => (ra.valor < x) && ra.valor.toString().endsWith('0'))
       .reduce((a, b) => (a.valor > b.valor) ? a : b);
     if (noEsNulo(rango)) {
-      console.log('rango ' + rango.valor + ' numero ' + numero);
       const txt = (rango.prefijo.trim() === '' ? rango.texto : rango.prefijo) + ' ';
       numero = numero - rango.valor;
-      console.log('txt ' + txt);
-      console.log('rango ' + rango.valor + ' numero ' + numero);
       textus = prefix + (numero > 0 ? txt : rango.texto);
+      textus = rango.valor < 100 ? textus + 'y ' : textus;
       return numero > 0 ? this.numeroEnPalabras(numero, textus) : textus;
     }
     return null;
