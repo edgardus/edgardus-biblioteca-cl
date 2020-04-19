@@ -16,6 +16,7 @@ describe('NumeroEnPalabrasService', () => {
     { valor: 2022, texto: 'dos mil veintidós' },
     { valor: 12022, texto: 'doce mil veintidós' },
     { valor: 12122, texto: 'doce mil ciento veintidós' },
+    { valor: 4421122, texto: 'cuatro millones cuatrocientos veintiún mil ciento veintidós' },
     { valor: 112122, texto: 'ciento doce mil ciento veintidós' }
   ];
 
