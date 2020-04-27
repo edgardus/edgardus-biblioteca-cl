@@ -1,6 +1,6 @@
 {
   "name": "biblioteca-cl-wrk",
-  "version": "0.0.0",
+  "version": "1.0.beta",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

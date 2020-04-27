@@ -1,9 +1,4 @@
-export interface EscalaNumero {
-  min: number;
-  max: number;
-  nombreSingular: string;
-  nombrePlural: string;
-}
+
 
 export interface ValorNumero {
   valor: number;
@@ -12,13 +7,9 @@ export interface ValorNumero {
   nota: string;
 }
 
-export interface ArbolNumeros {
-  valoresNumero: ValorNumero[];
-  escalaNumerica: EscalaNumero[];
-}
 
-export const ESCALA_NUMERICA: EscalaNumero[] = [
-];
+
+
 export const VALORES_NUMEROS: ValorNumero[] = [
   { valor: 0, texto: 'cero', prefijo: '', nota: '' },
   { valor: 1, texto: 'uno', prefijo: '', nota: '' },
@@ -129,7 +120,7 @@ export const VALORES_NUMEROS: ValorNumero[] = [
   { valor: 100000, texto: 'cien mil', prefijo: '', nota: '' },
   { valor: 1000000, texto: 'un millón', prefijo: 'millones', nota: '' },
   { valor: 500000000, texto: 'quinientos millones', prefijo: '', nota: '' },
-  { valor: 1000000000, texto: 'mil millones (a veces «un millardo»)', prefijo: '', nota: '' },
+  { valor: 1000000000, texto: 'mil millones', prefijo: '', nota: '' },
   { valor: 1200000000, texto: 'mil doscientos millones', prefijo: '', nota: '' },
   { valor: 5000000000, texto: 'cinco mil millones', prefijo: '', nota: '' },
   { valor: 1000000000000, texto: 'un billón', prefijo: '', nota: '' },
@@ -153,7 +144,3 @@ export const VALORES_NUMEROS: ValorNumero[] = [
 
 ];
 
-export const ARBOL_NUMEROS: ArbolNumeros = {
-  valoresNumero: VALORES_NUMEROS,
-  escalaNumerica: ESCALA_NUMERICA
-};
