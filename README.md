@@ -2,12 +2,14 @@
 
 Proyecto generado con  [Angular CLI](https://github.com/angular/angular-cli) versión 8.3.25.
 
-Biblioteca de funciones y pipes con utilidades para uso de aplicaciones de habla español.
+Biblioteca de funciones y pipes con utilidades para uso en aplicaciones de habla español.
 
 # Contenido
 
 ### Numero en Palabras
- [src](./projects/biblio-cl-angular/src/lib/numero-en-palabras)
+Metodo encargado de expresar un numero en decimales. 
+-en progreso.
+ [Modulo Biblioteca](./projects/biblio-cl-angular/src/lib/numero-en-palabras)
 
 
 

@@ -19,18 +19,20 @@ export class NumeroEnPalabrasService {
    */
 
   numeroEnPalabras(x: number, plural: boolean = false): string {
-    let textus = '';
+    let textoEntero = '';
+    let textoDecimal = '';
 
     if (esNulo(x) || isNaN(x)) {
-      return textus;
+      return textoEntero;
     }
-    if (Number.isInteger(x)) {
-
+    if (!Number.isInteger(x)) {
+      textoDecimal = this.decimalesEnPalabras(x);
+      x = +x.toString().split('.')[0];
     }
     const valorExacto = VALORES_NUMEROS.find(vn => vn.valor === x);
     if (noEsNulo(valorExacto)) {
-      textus = plural && noEsNuloNiVacio(valorExacto.prefijo) ? valorExacto.prefijo : valorExacto.texto;
-      return textus;
+      textoEntero = plural && noEsNuloNiVacio(valorExacto.prefijo) ? valorExacto.prefijo : valorExacto.texto;
+      return textoEntero + textoDecimal;
     }
     let numeroStr = x.toString().trim();
     if (numeroStr.length >= 5 && x < 1000000000000) {
@@ -57,7 +59,7 @@ export class NumeroEnPalabrasService {
         }
         textoNumero = recurResult + textoNumero;
       });
-      return textoNumero.trim();
+      return textoNumero.trim() + textoDecimal;
     }
     const rango = VALORES_NUMEROS.filter(ra => (ra.valor < x) && ra.valor.toString().endsWith('0'))
       .reduce((a, b) => (a.valor > b.valor) ? a : b);
@@ -65,9 +67,10 @@ export class NumeroEnPalabrasService {
       console.log('entra a rango');
       const txt = (rango.prefijo.trim() === '' ? rango.texto : rango.prefijo) + ' ';
       const numeroNuevo = x - rango.valor;
-      textus = (numeroNuevo > 0 ? txt : rango.texto);
-      textus = rango.valor < 100 ? textus + 'y ' : textus;
-      return numeroNuevo > 0 ? textus + this.numeroEnPalabras(numeroNuevo, plural) : textus;
+      textoEntero = (numeroNuevo > 0 ? txt : rango.texto);
+      textoEntero = rango.valor < 100 ? textoEntero + 'y ' : textoEntero;
+      const resultado = numeroNuevo > 0 ? textoEntero + this.numeroEnPalabras(numeroNuevo, plural) : textoEntero;
+      return resultado + textoDecimal;
     }
     return null;
   }
@@ -78,7 +81,7 @@ export class NumeroEnPalabrasService {
    * @param x numero con valores decimales
    */
   decimalesEnPalabras(x: number): string {
-    let texto = 'coma';
+    let texto = ' coma';
     if (esNulo(x) || isNaN(x) || Number.isInteger(x)) {
       return texto;
     }

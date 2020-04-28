@@ -23,11 +23,12 @@ describe('numeroEnPalabras', () => {
     { valor: 1000000000000501, texto: 'mil billones quinientos uno' },
     { valor: 4421122, texto: 'cuatro millones cuatrocientos veintiún mil ciento veintidós' },
     { valor: 44421122, texto: 'cuarenta y cuatro millones cuatrocientos veintiún mil ciento veintidós' },
-    { valor: 112122, texto: 'ciento doce mil ciento veintidós' }
+    { valor: 112122, texto: 'ciento doce mil ciento veintidós' },
+    { valor: 112122.32, texto: 'ciento doce mil ciento veintidós coma tres dos' }
   ];
   const listaValoresDecimales = [
-    { valor: 0.1, texto: 'coma uno' },
-    { valor: 0.116, texto: 'coma uno uno seis' }
+    { valor: 0.1, texto: ' coma uno' },
+    { valor: 0.116, texto: ' coma uno uno seis' }
   ];
 
 
