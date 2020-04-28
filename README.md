@@ -1,10 +1,15 @@
 # BibliotecaClWrk
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.25.
+Proyecto generado con  [Angular CLI](https://github.com/angular/angular-cli) versión 8.3.25.
 
-## Development server
+Biblioteca de funciones y pipes con utilidades para uso de aplicaciones de habla español.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+# Contenido
+
+### Numero en Palabras
+ [src](./projects/biblio-cl-angular/src/lib/numero-en-palabras)
+
+
 
 ## Code scaffolding
 
