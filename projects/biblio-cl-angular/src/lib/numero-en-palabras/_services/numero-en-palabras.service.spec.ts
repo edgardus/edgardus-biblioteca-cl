@@ -26,7 +26,8 @@ describe('numeroEnPalabras', () => {
     { valor: 112122, texto: 'ciento doce mil ciento veintidós' }
   ];
   const listaValoresDecimales = [
-    { valor: 0.1, texto: '' }
+    { valor: 0.1, texto: 'coma uno' },
+    { valor: 0.116, texto: 'coma uno uno seis' }
   ];
 
 

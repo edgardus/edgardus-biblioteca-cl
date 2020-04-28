@@ -1,6 +1,7 @@
 import { VALORES_NUMEROS } from './../_domain/dominio-nnp';
 import { Injectable } from '@angular/core';
 import { noEsNulo, noEsNuloNiVacio, esNulo } from '../../utilitario.service';
+import { isNumber } from 'util';
 
 @Injectable({
   providedIn: 'root'
@@ -71,14 +72,33 @@ export class NumeroEnPalabrasService {
     return null;
   }
 
+  /**
+   * Metodo encargado, de leer los valores decimales del numero y traducirlo a palabras.
+   *
+   * @param x numero con valores decimales
+   */
   decimalesEnPalabras(x: number): string {
-    let texto = '';
+    let texto = 'coma';
     if (esNulo(x) || isNaN(x) || Number.isInteger(x)) {
       return texto;
     }
     console.log('x ' + x);
     let decimalString = x.toString().split('.')[1];
-    console.log('decimalString ' + decimalString);
+    console.log('##### decimalString ' + decimalString);
+    while (decimalString.length > 0) {
+      const extraccion = +decimalString.substr(0, 1).trim();
+      console.log('##### ******************decimalString ' + decimalString);
+      decimalString = decimalString.slice(1);
+      console.log('******extraccion ' + extraccion);
+      if (noEsNulo(extraccion) &&
+        isNumber(extraccion)) {
+        const valorExacto = VALORES_NUMEROS.find(vn => vn.valor === extraccion);
+        if (noEsNulo(valorExacto)) {
+          texto = texto + ' ' + valorExacto.texto;
+          console.log('******tex ' + texto);
+        }
+      }
+    }
     return texto;
   }
 
